@@ -1,0 +1,3 @@
+export const GET_PRODUCTS = 'GET_PRODUCTS'
+export const GET_DETAILS = 'GET_DETAILS'
+export const GET_CONDITION = 'GET_CONDITION'
