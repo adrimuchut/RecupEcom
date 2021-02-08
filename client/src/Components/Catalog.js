@@ -33,11 +33,10 @@ function Catalog() {
 
     return (
         <div >
-            <div className="pagination justify-content-center">
-                    <label><button type="button" className="btn btn-outline-secondary" onClick={() => { dispatch(getProducts(Product, Page - 10, Sort)) }} >Anterior &nbsp;&nbsp;
-                 
+            <div  style={{fontSize:'20px', cursor:'pointer', justifyContent:'space-between', display:'flex', paddingTop:'20px', paddingBottom:'20px'}}>
+                    <label><button type="button" className="btn btn-outline-primary" onClick={() => { dispatch(getProducts(Product, Page - 10, Sort)) }} >  ⏪        
  </button></label>
-                    <button type="button" className="btn btn-outline-primary" onClick={() => { dispatch(getProducts(Product, Page + 10, Sort)) }}>Siguiente</button>
+                    <button type="button" className="btn btn-outline-primary" onClick={() => { dispatch(getProducts(Product, Page + 10, Sort)) }}> ⏩ </button>
 
             </div>
         <div   >
