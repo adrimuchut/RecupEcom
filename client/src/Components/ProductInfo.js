@@ -3,7 +3,7 @@ import {Carousel} from 'react-bootstrap';
 import  'bootstrap/dist/css/bootstrap.min.css'; 
  
 
-function ProductInfo({image,image2,image3,title, price, condition, stock}) {
+function ProductInfo({image,image2,image3,title, price, condition, stock }) {
     
    return ( 
    
@@ -17,7 +17,7 @@ function ProductInfo({image,image2,image3,title, price, condition, stock}) {
          "justify-content": "center",
          "width": "100%"
          }}>
-  <Carousel.Item interval={2000}>
+  <Carousel.Item interval={4000}>
     <img
    
       className="d-block w-100"
@@ -26,12 +26,9 @@ function ProductInfo({image,image2,image3,title, price, condition, stock}) {
     />
     
   </Carousel.Item>
-  <Carousel.Item>
+  <Carousel.Item interval={4000}>
     <img
-     style={{ 
-       
-        
-    }}
+    
       className="d-block w-100"
       src={image2}
       alt="Third slide"
@@ -39,7 +36,7 @@ function ProductInfo({image,image2,image3,title, price, condition, stock}) {
 
     
   </Carousel.Item>
-  <Carousel.Item>
+  <Carousel.Item interval={4000}>
     <img
     
       className="d-block w-100"
@@ -70,6 +67,7 @@ function ProductInfo({image,image2,image3,title, price, condition, stock}) {
            <p className="list-group-item">Precio: ${price}</p>
            <p className="list-group-item">Estado: {condition}</p>
            <p className="list-group-item">Stock disponible {stock}</p>
+          
            
            </ul>
                 

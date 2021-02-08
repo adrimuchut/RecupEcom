@@ -2,7 +2,6 @@ import React, {useEffect} from 'react'
 import { getCondition, getProducts } from '../Redux/actions'
 import { useSelector, useDispatch } from 'react-redux'
 import Card from './Card';
-// import '../css/Catalog.scss'
 
 
 

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import swal from 'sweetalert';
 
 
 import {
@@ -9,12 +10,12 @@ import {
 
 export function getProducts(payload, offset = 0, sort) {
     return function (dispatch) {
-        axios.get(`http://localhost:3001/api/search?q=${payload}&limit=15&offset=${offset}&sort=${sort}`)
+        axios.get(`http://localhost:3001/api/search?q=${payload}&limit=12&offset=${offset}&sort=${sort}`)
             .then((res) => res.data )
             .then ( data => {
                 dispatch({ type: GET_PRODUCTS, payload:data})
             })
-            .catch(error => alert(error))
+            .catch( () => swal( "Oops" ,  "No hay PRODUCTOS!" ,  "error"))
     }
 }
 
@@ -31,7 +32,7 @@ export function getDetails(id) {
 
 export function getCondition(payload, offset = 0, sort,condition) {
     return function (dispatch) {
-        axios.get(`http://localhost:3001/api/search/condition?q=${payload}&limit=15&offset=${offset}&sort=${sort}&ITEM_CONDITION=${condition}`)
+        axios.get(`http://localhost:3001/api/search/condition?q=${payload}&limit=12&offset=${offset}&sort=${sort}&ITEM_CONDITION=${condition}`)
             .then((res) => res.data )
             .then ( data => {
                 dispatch({ type: GET_CONDITION, payload:data})

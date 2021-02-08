@@ -30,7 +30,7 @@ const Details = ({match}) => {
                     condition={Details.condition}
                     stock={Details.available_quantity}
                     id={Details.id}
-                    warranty={Details.warranty}
+                    
                 />}
         </div>
     )
